@@ -1,0 +1,339 @@
+/* NewEntry page styling */
+
+/* Page background — full uniform color */
+.new-entry-page {
+  background-color: #e5debf;
+  min-height: 100vh;
+  min-width: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5debf !important;
+}
+
+/* Content wrapper using flexbox for two columns */
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+}
+
+/* Left form styling */
+.form-left-container {
+  width: 100%;
+}
+
+.left-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-row .inp-label {
+  min-width: 120px;
+  font-weight: 500;
+}
+
+.form-row input,
+.form-row select {
+  width: 300px;
+  height: 35px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+   color: #000;
+}
+
+/* Input fields in NewEntryTable */
+.new-entry-input {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  height: 35px;
+}
+
+/* Payment method row — label and options on same line */
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.payment-method .inp-label {
+  min-width: 130px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.payment-method-options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Right side table styling */
+.right-column-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.new-entry-table {
+  overflow-x: auto;
+}
+
+.new-entry-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.new-entry-table th,
+.new-entry-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Right side table header color */
+.new-entry-par .table-th {
+  /* background-color: #1a6b5a; */
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.bottom-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.total-section {
+  margin-top: 15px;
+  font-weight: 600;
+  /* Placeholder for total amount display */
+}
+
+/* Button style overrides (if needed) */
+.pop-cancel-btn {
+  background-color: #7ea0c2; /* muted blue */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pop-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* ===========================
+   Tablet Responsive
+=========================== */
+@media (max-width: 992px) {
+
+  .content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .form-row {
+    justify-content: space-between;
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .payment-method {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .bottom-controls {
+    justify-content: center;
+  }
+}
+
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+@media (max-width:768px){
+
+  .new-entry-page{
+    padding:8px;
+  }
+
+  .content-wrapper{
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    gap:8px;
+    width:100%;
+  }
+
+  .left-column{
+    flex:0 0 38%;
+    max-width:38%;
+}
+
+.right-column{
+    flex:0 0 62%;
+    max-width:62%;
+}
+  
+   .form-left-container{
+        margin-top:35px;
+    }
+  .form-left-container,
+  .left-form{
+    width:100%;
+  }
+
+  /* Form */
+  .left-form{
+    gap:10px;
+  }
+
+  .form-row{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px;
+    margin-bottom:10px;
+}
+
+.form-row .inp-label{
+    width:100%;
+    min-width:unset;
+    margin:0;
+    font-size:11px;
+    font-weight:600;
+}
+
+.form-row input,
+.form-row select{
+    width:100% !important;
+    max-width:100%;
+    min-width:0;
+    height:28px;
+    font-size:10px;
+    box-sizing:border-box;
+}
+
+  .form-row input[type="date"]{
+    margin-top:0;
+    height:30px;
+    padding:2px 6px;
+    line-height:30px;
+}
+
+  /* Payment Method */
+
+  .payment-method{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+    margin-top:8px;
+  }
+
+  .payment-method .inp-label{
+    min-width:unset;
+    font-size:11px;
+  }
+
+  .payment-method-options{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .payment-method-options label{
+    font-size:11px;
+  }
+
+  /* Table */
+
+  .new-entry-par{
+    height:65vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+  }
+
+  .new-entry-table{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+  .new-entry-table table{
+    width:100%;
+    table-layout:fixed;
+    border-collapse:collapse;
+  }
+
+  .new-entry-table th,
+  .new-entry-table td{
+    padding:3px;
+    font-size:10px;
+  }
+
+  .new-entry-table input{
+    width:100%;
+    min-width:0;
+    height:28px;
+    font-size:10px;
+    padding:2px 4px;
+  }
+
+  .amount-icon{
+    right:4px;
+  }
+  .amount-icon svg{
+    font-size:14px !important;
+}
+
+
+  /* Buttons */
+
+  .bottom-controls{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top:10px;
+  }
+
+  .pop-cancel-btn{
+    width:100%;
+    height:36px;
+  }
+}

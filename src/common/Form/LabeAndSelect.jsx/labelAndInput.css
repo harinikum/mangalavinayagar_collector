@@ -1,0 +1,46 @@
+.label-and-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-and-input:nth-child(1),
+.label-and-input:nth-child(2) {
+  flex: 1;
+}
+
+.lab-input {
+  width: 50%;
+}
+
+.lab-input[type="date"] {
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  color: black !important;
+  background-color: white !important;
+}
+
+.inp-select {
+  width: 50%;
+}
+
+@media screen and (max-width: 500px) {
+   .label-and-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .inp-label{
+    width: 100%;
+    margin-bottom: 2px;
+    font-weight: 600;
+  }
+
+  .lab-input{
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+}
